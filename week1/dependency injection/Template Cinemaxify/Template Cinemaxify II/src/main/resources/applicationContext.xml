@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Tasks: -->
+
+    <!-- Beans for NormalPlan and PremiumPlan with bean id are already created,
+         you are supposed to add the class attribute to them respectively. -->
+    <bean id="Normal" class="com.example.Cinemaxify.NormalPlan" />
+    <bean id="Premium" class="com.example.Cinemaxify.PremiumPlan"/>
+
+    <!-- Define all beans for different combination of Member & Plan -->
+    <!-- There will be a total 4 combination beans.                 -->
+    <!-- A sample bean is provided to you for reference.            -->
+    <!-- The bean id will follow the below defined naming convention -->
+
+    <!--
+        The bean id will follow CamelCase Convention:
+        //selfNormal
+        //selfPremium
+        //spouseNormal
+        //spousePremium
+    -->
+
+    <bean id="selfNormal" class="com.example.Cinemaxify.Self">
+        <constructor-arg ref="Normal"/>
+        
+    </bean>
+    
+    <bean id="selfPremium" class="com.example.Cinemaxify.Self">
+        <constructor-arg ref="Premium"/>
+        
+    </bean>
+    
+    <bean id="spouseNormal" class="com.example.Cinemaxify.Spouse">
+        <constructor-arg ref="Normal"/>
+        
+    </bean>
+    
+    <bean id="spousePremium" class="com.example.Cinemaxify.Spouse">
+        <constructor-arg ref="Premium"/>
+        
+    </bean>
+
+</beans>

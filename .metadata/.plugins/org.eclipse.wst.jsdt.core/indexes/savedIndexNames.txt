@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+E:\Rani\Coding ninjas\Spring boot\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+83219640.index
+732275830.index
+1887419974.index
+3982836368.index
+2741266545.index
+266070714.index
